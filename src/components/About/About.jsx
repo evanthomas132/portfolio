@@ -25,17 +25,17 @@ const About = () => {
       </div>
       <div className="skills">
         <div className="technical_skills">
-        <h2>Technical Skills</h2>
-        <div className="technical_list">
-        <ul>
-          <li>React</li>
-          <li>Javascript</li>
-          <li>Node.js</li>
-          <li>Express.js</li>
-          <li>RESTful API's</li>
-          <li>MongoDB</li>
-        </ul>
-        </div>
+          <h2>Technical Skills</h2>
+          <div className="technical_list">
+            <ul>
+              <li>React</li>
+              <li>Javascript</li>
+              <li>Node.js</li>
+              <li>Express.js</li>
+              <li>Typescript</li>
+              <li>MongoDB</li>
+            </ul>
+          </div>
         </div>
         <div className="soft_skills">
           <h2>Soft Skills</h2>
