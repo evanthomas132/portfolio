@@ -1,0 +1,91 @@
+.navbar {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  text-align: center;
+  position: relative;
+  height: 200px;
+}
+
+.navbar_logo {
+  background: linear-gradient(-45deg, #00e4b6e0, #0065bd, #0065bd, #00e4b6e0);
+  background-size: 300%;
+  font-size: 3rem;
+  font-weight: 700;
+  width: 100px;
+  font-family: "Dancing Script", sans-serif;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animated_text 5s ease-in-out infinite;
+  -moz-animation: animated_text 5s ease-in-out infinite;
+}
+@keyframes animated_text {
+  0% {
+    background-position: 0px 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0px 50%;
+  }
+}
+
+.navbar_links_small {
+  display: none;
+}
+
+.navbar_icon {
+  font-size: 3rem;
+  color: #00e4b6e0;
+  border: 2px solid #0065bd;
+  padding: 0.5rem;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.navbar_links ul,
+.navbar_links {
+  background: linear-gradient(-45deg, #00e4b6e0, #0065bd, #0065bd, #00e4b6e0);
+  display: flex;
+  margin-top: 0.5rem;
+  gap: 1rem;
+  font-weight: 500;
+  font-size: 1.3rem;
+  font-family: "Poppins", sans-serif;
+  background-size: 600%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animated_text 5s ease-in-out infinite;
+  -moz-animation: animated_text 5s ease-in-out infinite;
+}
+
+.small_links {
+  position: absolute;
+  top: 70%;
+  right: 0;
+  background-color: #33ffd6e0;
+  width: 120px;
+  border-radius: 10px 0px 0px 10px;
+  align-items: center;
+  font-weight: 700;
+}
+
+.small_links li {
+  margin: 3rem 0rem;
+  font-size: 1.2rem;
+}
+.small_links a {
+  color: #0065bd;
+  font-family: "Poppins", sans-serif;
+}
+
+@media screen and (max-width: 700px) {
+  .navbar_links {
+    display: none;
+  }
+  .navbar_links_small {
+    display: flex;
+  }
+}

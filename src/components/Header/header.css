@@ -1,0 +1,71 @@
+.header {
+  display: flex;
+  height: 75%;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.header_head h2{
+  font-size: 2rem;
+  color: #00e4b6e0;
+}
+
+
+.header_head h1 {
+  background: linear-gradient(-45deg, #00e4b6e0, #0065bd, #00e4b6e0, #0065bd);
+  background-size: 300%;
+  font-weight: 700;
+  font-size: 5rem;
+  width: auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animated_text 5s ease-in-out infinite;
+  -moz-animation: animated_text 5s ease-in-out infinite;
+}
+
+
+.header_slogan h2 {
+  color: #00e4b6e0;
+  margin-top: 0.5rem;
+  font-size: 2rem;
+}
+
+.header_slogan h3 {
+  color: #55b0ff;
+  font-size: 1.3rem;
+  width: 60%;
+  margin: 1rem auto;
+  line-height: 40px;
+}
+
+@keyframes animated_text {
+  0% {
+    background-position: 0px 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0px 50%;
+  }
+}
+
+@media screen and (min-width:300px) and (max-width: 700px) {
+
+  .header {
+    height: 60%;
+  }
+  .header_head h1 {
+    font-size: 2.5rem;
+  }
+  .header_slogan h2 {
+    font-size: 1.5rem;
+  }
+
+  .header_slogan h3 {
+    width: 100%;
+    font-size: 1.3rem;
+    width: 90%;
+  }
+}

@@ -1,0 +1,118 @@
+.contact {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+  
+  .contact_title h1 {
+    background: linear-gradient(-45deg, #00e4b6e0, #0065bd, #00e4b6e0, #0065bd);
+    background-size: 300%;
+    font-weight: 700;
+    font-size: 3rem;
+    width: auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animated_text 5s ease-in-out infinite;
+    -moz-animation: animated_text 5s ease-in-out infinite;
+  }
+
+  .contact_me h4 {
+    border: 3px solid;
+    border-image: linear-gradient(to right, #00e4b6e0, #0065bd) 1;
+    padding: 1rem;
+    width: 450px;
+    font-size: 1.2rem;
+    font-weight: 200;
+  }
+  
+  .contact_me {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 1.5rem 0rem;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .contact_me h4 {
+  }
+  
+  .contact_thin {
+    font-weight: 200;
+  }
+  .name,
+  .email,
+  .message {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  input,
+  textarea {
+    border-radius: 10px;
+    border: 1px solid #00e4b6e0;
+    background-color: rgba(255, 255, 255, 0.4);
+    color: white;
+  }
+  
+  .contact input {
+    padding: 0.5rem;
+  }
+  .message textarea {
+    width: 400px;
+    resize: none;
+    height: 80px;
+    font-family: "Outfit", sans-serif;
+    text-indent: 10px;
+    line-height: 25px;
+  }
+  
+  .contact button {
+    margin-top: 1rem;
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #0065bd;
+    border: none;
+    transition: all ease-in-out 500ms;
+  }
+
+  .contact button:hover {
+    background-color: #00e4b6e0;
+    color: black;
+    transition: all ease-in-out 500ms;
+  }
+  
+  @media only screen and (max-width: 850px) {
+    .contact_title {
+      font-size: 1.5rem;
+    }
+    .contact input {
+      width: 300px;
+      margin: 0 auto;
+    }
+  
+    .contact textarea {
+      width: 300px;
+      margin: 0 auto;
+    }
+  
+    .contact_me{
+      display: flex;
+      flex-direction: column;
+      width: 50px;
+      margin: 1.5rem auto;
+    }
+    .contact_me h4 {
+      font-size: 0.9rem;
+      width: 300px;
+    }
+  }

@@ -1,0 +1,109 @@
+.about {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.about h1 {
+  background: linear-gradient(-45deg, #00e4b6e0, #0065bd, #00e4b6e0, #0065bd);
+  background-size: 300%;
+  font-weight: 700;
+  font-size: 3.5rem;
+  width: auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animated_text 5s ease-in-out infinite;
+  -moz-animation: animated_text 5s ease-in-out infinite;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.about_me p {
+  color: white;
+  width: 90%;
+  line-height: 40px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.skills {
+  margin: 2rem;
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+  text-align: center;
+}
+
+.technical_list ul,
+.soft_list ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: linear-gradient(-45deg, #00e4b6e0, #5cadf4, #00e4b6e0, #5cadf4);
+  background-size: 200%;
+  font-weight: 700;
+  width: auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animated_text 5s ease-in-out infinite;
+  -moz-animation: animated_text 5s ease-in-out infinite;
+  gap: 0.5rem;
+  position: relative;
+  width: 500px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.technical_list ul::before,
+.technical_list ul::after,
+.soft_list ul::before,
+.soft_list ul::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: #0065bd;
+  transform: translateX(-50%);
+}
+
+.soft_list ul::before {
+  left: 33%;
+}
+
+.soft_list ul::after {
+  right: 33%;
+}
+
+.technical_list ul::before {
+  left: 30%;
+}
+
+.technical_list ul::after {
+  right: 30%;
+}
+
+@media screen and (min-width:300px) and (max-width: 700px) {
+    .skills {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: auto;
+        text-align: center;
+    }
+
+    .technical_list ul, .soft_list ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .technical_list ul::before {
+        left: 35%;
+    }
+
+    .technical_list ul::after {
+        right: 35%;
+    }
+    
+}
