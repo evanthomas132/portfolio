@@ -41,7 +41,7 @@
   grid-template-columns: repeat(3, 1fr);
   background: linear-gradient(-45deg, #00e4b6e0, #5cadf4, #00e4b6e0, #5cadf4);
   background-size: 200%;
-  font-weight: 700;
+  font-weight: 300;
   width: auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
