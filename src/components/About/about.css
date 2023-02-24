@@ -6,7 +6,7 @@
 .about h1 {
   background: linear-gradient(-45deg, #00e4b6e0, #0065bd, #00e4b6e0, #0065bd);
   background-size: 300%;
-  font-weight: 700;
+  font-weight: 300;
   font-size: 3.5rem;
   width: auto;
   -webkit-background-clip: text;
