@@ -1,5 +1,5 @@
 import "./navbar.css";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { useState } from "react";
 const Navbar = () => {
@@ -30,6 +30,12 @@ const Navbar = () => {
     },
     animate: {
       x: "0",
+      transition: {
+        duration: 0.5,
+      },
+    },
+    exit: {
+      x: "100vh",
       transition: {
         duration: 0.5,
       },
@@ -72,49 +78,52 @@ const Navbar = () => {
       </div>
       <div className="navbar_links_small">
         <RxHamburgerMenu className="navbar_icon" onClick={handleClick} />
-        {smallNav ? (
-          <motion.div
-            variants={smallAnimation}
-            initial="initial"
-            animate="animate"
-            className="small_links"
-          >
-            <ul>
-              <motion.li
-                whileHover={{ scale: 1.2 }}
-                transition={{ type: "spring", stiffness: 200, damping: 5 }}
-              >
-                <a rel="noreferrer" href="/">
-                  Home
-                </a>
-              </motion.li>
-              <motion.li
-                whileHover={{ scale: 1.2 }}
-                transition={{ type: "spring", stiffness: 200, damping: 5 }}
-              >
-                <a rel="noreferrer" href="/#projects">
-                  Projects
-                </a>
-              </motion.li>
-              <motion.li
-                whileHover={{ scale: 1.2 }}
-                transition={{ type: "spring", stiffness: 200, damping: 5 }}
-              >
-                <a rel="noreferrer" href="/#about">
-                  About
-                </a>
-              </motion.li>
-              <motion.li
-                whileHover={{ scale: 1.2 }}
-                transition={{ type: "spring", stiffness: 200, damping: 5 }}
-              >
-                <a rel="noreferrer" href="/#contact">
-                  Contact
-                </a>
-              </motion.li>
-            </ul>
-          </motion.div>
-        ) : null}
+        <AnimatePresence>
+          {smallNav ? (
+            <motion.div
+              variants={smallAnimation}
+              initial="initial"
+              animate="animate"
+              className="small_links"
+              exit="exit"
+            >
+              <ul>
+                <motion.li
+                  whileHover={{ scale: 1.2 }}
+                  transition={{ type: "spring", stiffness: 200, damping: 5 }}
+                >
+                  <a rel="noreferrer" href="/">
+                    Home
+                  </a>
+                </motion.li>
+                <motion.li
+                  whileHover={{ scale: 1.2 }}
+                  transition={{ type: "spring", stiffness: 200, damping: 5 }}
+                >
+                  <a rel="noreferrer" href="/#projects">
+                    Projects
+                  </a>
+                </motion.li>
+                <motion.li
+                  whileHover={{ scale: 1.2 }}
+                  transition={{ type: "spring", stiffness: 200, damping: 5 }}
+                >
+                  <a rel="noreferrer" href="/#about">
+                    About
+                  </a>
+                </motion.li>
+                <motion.li
+                  whileHover={{ scale: 1.2 }}
+                  transition={{ type: "spring", stiffness: 200, damping: 5 }}
+                >
+                  <a rel="noreferrer" href="/#contact">
+                    Contact
+                  </a>
+                </motion.li>
+              </ul>
+            </motion.div>
+          ) : null}
+        </AnimatePresence>
       </div>
     </div>
   );
