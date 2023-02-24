@@ -1,3 +1,4 @@
+
 export const projectAnimation = {
   initial: {
     opacity: 0,
@@ -37,3 +38,4 @@ export const sloganAnimation = {
     transition: { duration: 0.5, delay: 0.5 },
   },
 };
+

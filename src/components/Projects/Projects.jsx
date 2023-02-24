@@ -17,7 +17,6 @@ const Projects = () => {
     setActiveSection("typescript");
   };
 
-
   return (
     <div className="projects" id="projects">
       <div className="project_title">
@@ -25,7 +24,14 @@ const Projects = () => {
       </div>
       <div className="project_links">
         <li onClick={handleReactClick}>ReactJS</li>
-        <li><a href="https://github.com/evanthomas132?tab=repositories" target="_blank">Github</a></li>
+        <li>
+          <a
+            href="https://github.com/evanthomas132?tab=repositories"
+            target="_blank"
+          >
+            Github
+          </a>
+        </li>
         <li onClick={handleTypescriptClick}>TypeScript</li>
       </div>
       <div className="project_header">
