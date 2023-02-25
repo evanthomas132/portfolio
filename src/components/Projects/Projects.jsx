@@ -77,7 +77,18 @@ const Projects = () => {
             </div>
           </div>
         )}
-        {activeSection === "typescript" && <div>{TypeScriptProjectsArray}</div>}
+        {activeSection === "typescript" && (
+          <div>
+            {TypeScriptProjectsArray}
+            <div className="project_button">
+              <Link to={"/projects"}>
+                <button onClick={() => window.scrollTo(0, 0)}>
+                  See All Projects Here!
+                </button>
+              </Link>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
