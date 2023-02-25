@@ -76,7 +76,7 @@
   overflow: hidden;
   border-radius: 5px;
   animation: animated_background 3s ease-in-out infinite;
-  margin-top: 2rem;
+  margin: 2rem;
 }
 
 .project_info {
